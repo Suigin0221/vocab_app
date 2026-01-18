@@ -1,0 +1,37 @@
+[
+  {
+    "headword": "run",
+    "senses": [
+      {
+        "pos_ja": "V",
+        "meanings": ["走る", "運営する"]
+      },
+      {
+        "pos_ja": "N",
+        "meanings": ["走り"]
+      }
+    ]
+  },
+  {
+    "headword": "book",
+    "senses": [
+      {
+        "pos_ja": "N",
+        "meanings": ["本", "書籍"]
+      },
+      {
+        "pos_ja": "V",
+        "meanings": ["予約する"]
+      }
+    ]
+  },
+  {
+    "headword": "kindness",
+    "senses": [
+      {
+        "pos_ja": "N",
+        "meanings": ["優しさ", "親切"]
+      }
+    ]
+  }
+]
