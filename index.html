@@ -17,41 +17,57 @@
       border-radius: 12px;
       margin-bottom: 12px;
     }
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 8px;
+      font-size: 16px;
+    }
     .word {
       font-size: 28px;
       font-weight: bold;
+      margin-bottom: 8px;
     }
     input {
       width: 100%;
       font-size: 18px;
       padding: 8px;
-      margin-top: 12px;
+      margin-top: 8px;
     }
-    button {
-      margin-top: 12px;
-      padding: 10px;
-      font-size: 16px;
-      width: 100%;
+    .hidden {
+      display: none;
     }
-    .result {
+    #detail {
       margin-top: 12px;
-      font-size: 16px;
+      padding: 12px;
+      background: #eef3ff;
+      border-radius: 8px;
+      font-size: 15px;
     }
-    .correct { color: green; }
-    .wrong { color: red; }
   </style>
 </head>
 <body>
 
-<div class="card">
-  <div>モードA：英 → 日</div>
-  <div class="word" id="word"></div>
+<!-- モード選択 -->
+<div class="card" id="modeSelect">
+  <h2>モード選択</h2>
+  <button onclick="startMode('A')">A：英 → 日</button>
+  <button onclick="startMode('B')">B：日 → 英</button>
+  <button onclick="startMode('C')">C：核 → 英</button>
+</div>
 
-  <input id="answer" placeholder="意味を入力してEnter">
+<!-- 問題画面 -->
+<div class="card hidden" id="quiz">
+  <div class="word" id="question"></div>
+
+  <input id="answer" placeholder="答えを入力してEnter">
 
   <button onclick="submitAnswer()">決定</button>
 
-  <div class="result" id="result"></div>
+  <div id="result"></div>
+  <div id="detail" class="hidden"></div>
+
+  <button onclick="backToMenu()">モード選択に戻る</button>
 </div>
 
 <script src="app.js"></script>
